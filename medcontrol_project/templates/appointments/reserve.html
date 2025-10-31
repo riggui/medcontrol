@@ -1,0 +1,9 @@
+{% extends 'appointments/base.html' %}
+{% block content %}
+<h1>Réserver le créneau {{ creneau }}</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-primary">Réserver</button>
+</form>
+{% endblock %}

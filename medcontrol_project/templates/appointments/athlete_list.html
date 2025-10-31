@@ -1,0 +1,14 @@
+{% extends 'appointments/base.html' %}
+{% block content %}
+<h1>Mes athlètes</h1>
+<table class="table">
+<thead><tr><th>Nom</th><th>Prénom</th><th>Naissance</th><th>Téléphone</th></tr></thead>
+<tbody>
+  {% for a in athletes %}
+  <tr><td>{{ a.nom }}</td><td>{{ a.prenom }}</td><td>{{ a.date_naissance }}</td><td>{{ a.telephone }}</td></tr>
+  {% empty %}
+  <tr><td colspan="4">Aucun athlète</td></tr>
+  {% endfor %}
+</tbody>
+</table>
+{% endblock %}

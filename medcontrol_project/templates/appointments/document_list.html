@@ -1,0 +1,11 @@
+{% extends 'appointments/base.html' %}
+{% block content %}
+<h1>Documents</h1>
+<ul>
+  {% for doc in documents %}
+    <li><a href="{{ doc.fichier.url }}">{{ doc.titre }}</a> — {{ doc.description }}</li>
+  {% empty %}
+    <li>Aucun document disponible.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

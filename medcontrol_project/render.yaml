@@ -3,7 +3,7 @@ services:
     name: medcontrol
     env: docker
     plan: free
-    dockerfilePath: Dockerfile # chemin vers Dockerfile
+    dockerfilePath: ./Dockerfile # << chemin explicite
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: medcontrol_project.settings
